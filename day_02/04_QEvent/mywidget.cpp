@@ -69,6 +69,7 @@ void MyWidget::closeEvent(QCloseEvent *event){
     else{
         //不关闭窗口
         //忽略事件，事件想父组件传递
+        qDebug() << "取消关闭窗口，事件继续传递！";
         event->ignore();
     }
 }
