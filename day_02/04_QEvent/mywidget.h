@@ -27,6 +27,13 @@ protected:
 
     //关闭事件
     void closeEvent(QCloseEvent *event);
+
+    //重写事件
+    bool event(QEvent*);
+
+    //重写事件过滤器
+    bool eventFilter(QObject* obj, QEvent* e);
+
 private:
     Ui::MyWidget *ui;
     int timer_id;
