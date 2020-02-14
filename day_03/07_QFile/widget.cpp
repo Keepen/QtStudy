@@ -5,6 +5,8 @@
 #include <QFileInfo>
 #include <QDebug>
 #include <QDateTime>
+#include <QDataStream>
+
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
