@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServerWidget</class>
+ <widget class="QWidget" name="ServerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ServerWidget</string>
+  </property>
+  <widget class="QTextEdit" name="textEditRead">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>60</y>
+     <width>521</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEditWrite">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>240</y>
+     <width>521</width>
+     <height>151</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonSend">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>540</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Send</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonClose">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>540</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
