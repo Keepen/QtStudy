@@ -41,6 +41,20 @@ ServerWidget::ServerWidget(QWidget *parent)
         //成功连接后，才能让按钮有效
         ui->buttonFile->setEnabled(true);
 
+        connect(tcpSocket, &QTcpSocket::readyRead,
+                [=](){
+            //取客户端的信息
+            QByteArray buf = tcpSocket->readAll();
+            if(QString(buf) == "file done"){
+                //文件接收完毕
+                ui->textEdit->append("文件发送完毕！！！");
+                file.close();
+                tcpSocket->disconnectFromHost();
+                tcpSocket->close();
+            }
+        }
+                );
+
     });
 
     connect(&timer, &QTimer::timeout,

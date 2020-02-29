@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -26,6 +27,7 @@ public:
     QLineEdit *lineEditPort;
     QLabel *label_2;
     QPushButton *buttonConnect;
+    QProgressBar *progressBar;
 
     void setupUi(QWidget *ClientWidget)
     {
@@ -47,6 +49,10 @@ public:
         buttonConnect = new QPushButton(ClientWidget);
         buttonConnect->setObjectName(QString::fromUtf8("buttonConnect"));
         buttonConnect->setGeometry(QRect(430, 60, 93, 28));
+        progressBar = new QProgressBar(ClientWidget);
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        progressBar->setGeometry(QRect(100, 200, 391, 31));
+        progressBar->setValue(24);
 
         retranslateUi(ClientWidget);
 
